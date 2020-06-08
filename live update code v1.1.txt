@@ -1,0 +1,193 @@
+<html>
+<body style="background-color:white;">
+<h1 style="text-align:center;background-color:Orange;position:absolute; TOP:2px; LEFT:510px; WIDTH:400px; HEIGHT:50px ">LIVE SCORE BOARD</h1>
+
+<script>
+window.onload=myFunction123();
+function myFunction123() {
+
+  	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+   		 if (this.readyState == 4 && this.status == 200) {
+         
+         
+         	var str=this.responseText;
+    		res = str.split(",");
+              
+            
+            ctx.fillStyle = gradient;
+            ctx.clearRect(30,60,440,30 );
+            ctx.fillText(res[0], 210, 80); 
+            
+            ctx.fillStyle = gradient;
+            ctx.clearRect(30,93.8,440,30 );
+            ctx.fillText(res[1], 170, 112);
+            
+            ctx.fillStyle = gradient;
+            ctx.clearRect(50,160,160,30 );
+            ctx.fillText(res[2], 110, 178);
+
+            ctx.fillStyle = gradient;
+            ctx.clearRect(290,160,160,30 );
+            ctx.fillText(res[3], 350, 178);
+            
+            ctx.fillStyle = gradient;
+            ctx.clearRect(86,200,80,30 );
+            ctx.fillText(res[4], 120, 220);
+
+            ctx.fillStyle = gradient;
+            ctx.clearRect(328,200,80,30 );
+            ctx.fillText(res[5], 360, 220);
+            
+           	ctx.fillStyle = gradient;
+            ctx.clearRect(195,275,110,30 );
+			ctx.fillText(res[6], 235, 295);
+            
+    		setTimeout('myFunction123()', (1000));
+    		}
+  			      };
+ xhttp.open("GET", "https://script.google.com/macros/s/AKfycbyQWBuLKIl7jG1BTLaaYBgAK5Z9IXTjdbXjDyroRVKkIVxyHso/exec?ly", true);
+  xhttp.send();
+}
+</script>
+
+<canvas id="myCanvas" width="500" height="360"
+style="position:absolute; TOP:80px; LEFT:460px; border:1px solid #c3c3c3;">
+</canvas>
+
+<IMG STYLE="position:absolute; TOP:20px; LEFT:445px; WIDTH:100px; HEIGHT:100px" SRC="https://media.giphy.com/media/xGrwTAurLRaPm/giphy.gif">
+<IMG STYLE="position:absolute; TOP:20px; LEFT:885px; WIDTH:100px; HEIGHT:100px" SRC="https://media.giphy.com/media/xGrwTAurLRaPm/giphy.gif">
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#0000ff";
+ctx.fillRect(10,10,480,340);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "25px Arial";
+
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("1.0", "white");
+
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("INS VALSURA", 170, 45);
+
+//Team A & B
+ctx.font = "17px Arial";
+ctx.fillStyle = gradient;
+ctx.fillText("TEAM A", 95, 150);
+ctx.fillStyle = gradient;
+ctx.fillText("TEAM B", 335, 150);
+
+//Team A & B
+ctx.font = "17px Arial";
+ctx.fillStyle = gradient;
+ctx.fillText("TEAM A", 95, 150);
+ctx.fillStyle = gradient;
+ctx.fillText("TEAM B", 335, 150);
+
+//Timer 
+ctx.fillStyle = gradient;
+ctx.fillText("TIME", 228, 265);
+
+</script>
+
+<script>
+//Tropy name print
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("1.0", "black");
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(30,60,440,30);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//custom print
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(30,93.8,440,30);
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//Team name print
+//A
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(50,160,160,30);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//Team name print
+//B
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(290,160,160,30);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//score A
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(86,200,80,30);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//score B
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(328,200,80,30);
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "14px Arial";
+
+</script>
+
+<script>
+//print the time
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(195,275,110,30);
+
+</script>
+</body>
+</html>
